@@ -1,7 +1,7 @@
-git rm -r --cached "user service/node_modules"
-git rm -r --cached "user service/dist"
-git rm --cached "user service/.env"
+/user\ service/node_modules/
+/user\ service/dist/
+/user\ service/.env
 
-git rm -r --cached "admin service/node_modules"
-git rm -r --cached "admin service/dist"
-git rm --cached "admin service/.env"
+/admin\ service/node_modules/
+/admin\ service/dist/
+/admin\ service/.env
