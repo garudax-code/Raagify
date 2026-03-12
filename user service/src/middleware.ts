@@ -24,7 +24,7 @@ export const isAuth = async(
 
         if(!decodedValue || !decodedValue._id){
             res.status(403).json({
-                message:"Inalid token",
+                message:"Invalid token",
             });
             return;
         }
