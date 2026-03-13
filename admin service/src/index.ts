@@ -50,6 +50,15 @@ const port = process.env.PORT;
 
 initDB().then(() => {
   app.listen(port, () => {
-    console.log(`server is running on port ${port}`);
+    console.log(`Server is running on port ${port}`);
   });
 });
+
+
+
+//------------------------------------------
+// const app = express();
+// const port = process.env.PORT;
+// app.listen(port, ()=>{
+//   console.log(`server is running on port ${port}`)
+// })
