@@ -4,8 +4,9 @@ import { getAlbum, getAllsongs, getAllSongsOfAlbum, getSingleSong } from "./cont
 const router = express.Router();
 
 router.get("/album/all", getAlbum);
-router.get("/song/all",getAllsongs)
-router.get("/album/:id",getAllSongsOfAlbum)
-router.get("/song/:id",getSingleSong)
+router.get("/song/all",getAllsongs);
+router.get("/album/:id",getAllSongsOfAlbum);
+router.get("/song/:id",getSingleSong);
 
 export default router;
+
