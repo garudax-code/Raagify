@@ -1,4 +1,4 @@
-import type { AuthenticatedRequest } from "./middleware.js";
+import {type AuthenticatedRequest } from "./middleware.js";
 import { User } from "./model.js";
 import TryCatch from "./TryCatch.js";
 import bcrypt from "bcrypt";
@@ -67,7 +67,44 @@ export const loginUser = TryCatch(async (req, res) => {
   });
 });
 
-export const myProfile = TryCatch(async (req:AuthenticatedRequest,res)=>{
-    const user= req.user;
-    res.json(user);
-})
+export const myProfile = TryCatch(async (req: AuthenticatedRequest, res) => {
+  const user = req.user;
+
+  res.json(user);
+});
+
+export const addToPlaylist = TryCatch(
+  async (req: AuthenticatedRequest, res) => {
+    const userId = req.user?._id;
+
+    const user = await User.findById(userId);
+
+    if (!user) {
+      res.status(404).json({
+        message: "NO user with this id",
+      });
+      return;
+    }
+
+    if (user?.playlist.includes(req.params.id as string)) {
+      const index = user.playlist.indexOf(req.params.id as string);
+
+      user.playlist.splice(index, 1);
+
+      await user.save();
+
+      res.json({
+        message: " Removed from playlist",
+      });
+      return;
+    }
+
+    user.playlist.push(req.params.id as string);
+
+    await user.save();
+
+    res.json({
+      message: "Added to Playlist",
+    });
+  }
+);
