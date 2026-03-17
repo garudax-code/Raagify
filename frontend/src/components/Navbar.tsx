@@ -15,13 +15,13 @@ const Navbar = () => {
           <img
             src="/left_arrow.png"
             className="w-8 bg-black p-2 rounded-2xl cursor-pointer"
-            onClick={() => navigate(-1)}
+            onClick={() => navigate(-1)} // onepageback
             alt=""
           />
           <img
             src="/right_arrow.png"
             className="w-8 bg-black p-2 rounded-2xl cursor-pointer"
-            onClick={() => navigate(+1)}
+            onClick={() => navigate(+1)} //onepageforward
             alt=""
           />
         </div>

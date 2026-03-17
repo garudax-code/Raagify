@@ -22,7 +22,7 @@ const SongCard: React.FC<SongCardProps> = ({ image, name, desc, id }) => {
     <div className="min-w-[180px] p-2 px-3 rounded cursor-pointer hover:bg-[#ffffff26]">
       <div className="relative group">
         <img
-          src={image ? image : "/download.jpeg"}
+          src={image ? image : "/download.jpg"}
           className="mr-1 w-[160px] rounded"
           alt={name}
         />

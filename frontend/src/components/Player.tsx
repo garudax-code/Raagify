@@ -78,7 +78,7 @@ const Player = () => {
         <div className="h-[10%] bg-black flex justify-between items-center text-white px-4">
           <div className="lg:flex items-center gap-4">
             <img
-              src={song.thumbnail ? song.thumbnail : "/download.jpeg"}
+              src={song.thumbnail ? song.thumbnail : "/download.jpg"}
               className="w-12"
               alt=""
             />
