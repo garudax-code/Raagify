@@ -79,7 +79,7 @@ const Album = () => {
                           <b className="mr-4 text-[#a7a7a7]">{index + 1}</b>
                           <img
                             src={
-                              song.thumbnail ? song.thumbnail : "/download.jpeg"
+                              song.thumbnail ? song.thumbnail : "/download.jpg"
                             }
                             className="inline w-10 mr-5"
                             alt=""

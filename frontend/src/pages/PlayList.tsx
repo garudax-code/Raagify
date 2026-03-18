@@ -30,7 +30,7 @@ const PlayList = () => {
             ) : (
               <>
                 <div className="mt-10 flex gap-8 flex-col md:flex-row md:items-center">
-                  <img src={"/download.jpeg"} className="w-48 rounded" alt="" />
+                  <img src={"/download.jpg"} className="w-48 rounded" alt="" />
 
                   <div className="flex flex-col">
                     <p>PlayList</p>
@@ -68,7 +68,7 @@ const PlayList = () => {
                           <b className="mr-4 text-[#a7a7a7]">{index + 1}</b>
                           <img
                             src={
-                              song.thumbnail ? song.thumbnail : "/download.jpeg"
+                              song.thumbnail ? song.thumbnail : "/download.jpg"
                             }
                             className="inline w-10 mr-5"
                             alt=""
