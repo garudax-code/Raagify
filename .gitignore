@@ -1,7 +1,3 @@
-/user\ service/node_modules/
-/user\ service/dist/
-/user\ service/.env
-
 /admin\ service/node_modules/
 /admin\ service/dist/
 /admin\ service/.env
